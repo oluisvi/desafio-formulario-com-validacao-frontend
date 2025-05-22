@@ -1,16 +1,33 @@
 .formBox{
-    background-color: #f3f4f673;
+    background-color: #F9FAFB	;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    border-radius: 3%;
+    box-shadow: rgb(206, 199, 199) 0px 0px 10px;
+    height: 100%;
+    width: 50%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 .inputField{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    border-radius: 4px;
+    padding-top: 6%;
+    border-radius: 3%;
     font-size: 16px;
+}
+
+.inputField input{
+    width:18rem;
+    padding: 2%;
+    margin-top: 3%;
+    border-radius: 10px solid #d1d1d1;
+}
+
+.inputField span{
+    opacity: calc(60%);
 }

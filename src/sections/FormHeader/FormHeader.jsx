@@ -7,6 +7,7 @@ export default function Form() {
         <header>
           <article className={styles.headerTitle}>
             <article className={styles.title}>
+              <img src="/public/assets/logo.svg" alt="Logo Frontend Fusion" />
               <h1>Frontend Fusion</h1>
             </article>
             <article className={styles.subtitle}>
