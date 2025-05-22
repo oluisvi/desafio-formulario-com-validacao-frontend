@@ -1,4 +1,4 @@
-import Form from './sections/Form/Form';
+import Form from './sections/FormHeader/FormHeader';
 
 function App() {
 
