@@ -1,0 +1,15 @@
+.selectField{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6%;
+    border-radius: 3%;
+    font-size: 16px;
+}
+
+.selectField input{
+    width:18rem;
+    padding: 2%;
+    margin-top: 3%;
+    border-radius: 10px solid #d1d1d1;
+}
