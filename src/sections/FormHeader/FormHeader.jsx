@@ -1,13 +1,13 @@
 import styles from "./FormHeader.module.css";
 
-export default function Form() {
+export default function FormHeader() {
   return (
     <>
       <section className={styles.container}>
         <header>
           <article className={styles.headerTitle}>
             <article className={styles.title}>
-              <img src="/public/assets/logo.svg" alt="Logo Frontend Fusion" />
+              <img src="/assets/logo.svg" alt="Logo Frontend Fusion" />
               <h1>Frontend Fusion</h1>
             </article>
             <article className={styles.subtitle}>

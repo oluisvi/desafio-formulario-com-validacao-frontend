@@ -1,10 +1,11 @@
-import styles from './SelectField.module.css'
+import styles from './SelectField.module.css';
 
 export default function SelectField() {
   return (
     <>
-      <label htmlFor="cargo" className={styles.selectField}>Cargo pretendido</label>
-      <select id="cargo" name="cargo" required>
+    <article className={styles.cargoSelection}>
+      <label htmlFor="cargo" className={styles.selectTitle}>Cargo pretendido </label>
+      <select className={styles.selectField} id="cargo" name="cargo" required >
         <option value="">Selecione um cargo</option>
         <option value="frontend">Desenvolvedor Frontend</option>
         <option value="backend">Desenvolvedor Backend</option>
@@ -22,6 +23,10 @@ export default function SelectField() {
         <option value="scrum">Scrum Master</option>
         <option value="product-owner">Product Owner</option>
       </select>
+
+    </article>
     </>
   );
 }
+
+

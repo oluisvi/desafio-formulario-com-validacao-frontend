@@ -40,7 +40,7 @@ export default function InputField() {
           )}
         </article>
         <article className={styles.inputField}>
-          <label htmlFor="phone">Nome completo</label>
+          <label htmlFor="phone">Número de telefone</label>
           <input
             {...register("phone")}
             id="phone"
@@ -50,7 +50,7 @@ export default function InputField() {
             <p className={styles.error}>{errors.phone.message}</p>
           )}
         </article>
-        <SelectField />
+        <SelectField register={register} errors={errors} />
         <article className={styles.inputField}>
           <label htmlFor="linkedin">
             LinkedIn <span>(opcional)</span>
@@ -64,7 +64,6 @@ export default function InputField() {
             <p className={styles.error}>{errors.linkedin.message}</p>
           )}
         </article>
-
         <article className={styles.inputField}>
           <label htmlFor="github">
             GitHub <span>(opcional)</span>
@@ -78,6 +77,9 @@ export default function InputField() {
             <p className={styles.error}>{errors.github.message}</p>
           )}
         </article>
+        <button type="submit" className={styles.submitButton}>
+          Enviar
+        </button>
       </form>
     </>
   );

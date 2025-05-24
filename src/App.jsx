@@ -1,16 +1,14 @@
 import FormBody from './sections/FormBody/FormBody';
-import Form from './sections/FormHeader/FormHeader';
+import FormHeader from './sections/FormHeader/FormHeader';
 
-function App() {
+export default function App() {
 
   return (
     <>
       <main>
-      <Form/>
+      <FormHeader/>
       <FormBody/>
       </main>
     </>
   );
 }
-
-export default App
