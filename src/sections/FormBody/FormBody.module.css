@@ -7,3 +7,18 @@
   gap: 1rem;
   padding-top: 4%;
 }
+
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+  }
+
+  .formBox {
+    padding: 1rem;
+  }
+}

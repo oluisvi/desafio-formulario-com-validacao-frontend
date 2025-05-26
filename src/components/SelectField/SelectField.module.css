@@ -1,24 +1,27 @@
 .cargoSelection {
-  background-color: #f9fafb;
+  background-color: #f9fafb; /* cor de fundo clara */
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
+  text-align: left;
   border-radius: 3%;
   height: 100%;
-  width: 50%;
   padding-top: 5%;
 }
 
 .selectTitle {
+  
+  align-items: left;
   font-size: 1rem;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 .selectField {
-  width: 100%;
+  width: 18rem;
   height: 25%; /* altura relativa ao .cargoSelection */
-  padding: 2.5%;
+  padding: 2%;    
+  margin-top: 3%;
   font-size: 1rem;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -27,3 +30,5 @@
   appearance: none;
   cursor: pointer;
 }
+
+
