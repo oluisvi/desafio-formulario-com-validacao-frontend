@@ -54,6 +54,31 @@
   background-color: #2e5c94;
 }
 
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  color: green; /* ou use fill se for inline SVG */
+}
+.successContainer {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 @media screen and (max-width: 768px) {
   .formBox {
     width: 55%;

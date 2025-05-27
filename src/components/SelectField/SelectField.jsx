@@ -1,4 +1,6 @@
+import { Controller } from 'react-hook-form';
 import Select from 'react-select';
+import PropTypes from 'prop-types'; // para validação de props
 import styles from './SelectField.module.css';
 
 const options = [
@@ -20,29 +22,46 @@ const options = [
   { value: "product-owner", label: "Product Owner" },
 ];
 
-export default function SelectField() {
+export default function SelectField({ control, errors }) {
   return (
     <div className={styles.cargoSelection}>
       <label htmlFor="cargo" className={styles.selectTitle}>Cargo pretendido</label>
-      <Select
-  inputId="cargo"
-  name="cargo"
-  options={options}
-  placeholder="Selecione um cargo"
-  className={styles.selectField}  // aplica ao wrapper externo
-  styles={{
-    menu: (base) => ({
-      ...base,
-      maxHeight: '10rem',     // altura máxima do dropdown
-      overflowY: 'auto',      // adiciona scroll se passar da altura
-    }),
-    menuList: (base) => ({
-      ...base,
-      maxHeight: '10rem', // altura máxima do menu
-      padding: 0,
-    }),
-  }}
-/>
+      
+      <Controller
+        name="cargo"
+        control={control}
+        render={({ field }) => (
+          <Select
+            {...field}
+            options={options}
+            placeholder="Selecione um cargo"
+            inputId="cargo"
+            className={styles.selectField}
+            value={options.find(option => option.value === field.value)}
+            onChange={(selectedOption) => field.onChange(selectedOption.value)}
+            styles={{
+              menu: (base) => ({
+                ...base,
+                maxHeight: '10rem',
+                overflowY: 'auto',
+              }),
+              menuList: (base) => ({
+                ...base,
+                maxHeight: '10rem',
+                padding: 0,
+              }),
+            }}
+          />
+        )}
+      />
+      
+      {errors.cargo && <p className={styles.error}>{errors.cargo.message}</p>}
     </div>
   );
 }
+
+// Para evitar os avisos do linter
+SelectField.propTypes = {
+  control: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+};
