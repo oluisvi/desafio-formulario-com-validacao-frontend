@@ -1,32 +1,48 @@
+import Select from 'react-select';
 import styles from './SelectField.module.css';
+
+const options = [
+  { value: "", label: "Selecione um cargo" },
+  { value: "frontend", label: "Desenvolvedor Frontend" },
+  { value: "backend", label: "Desenvolvedor Backend" },
+  { value: "fullstack", label: "Desenvolvedor Full Stack" },
+  { value: "mobile", label: "Desenvolvedor Mobile" },
+  { value: "software-dev", label: "Desenvolvedor de Software" },
+  { value: "software-eng", label: "Engenheiro de Software" },
+  { value: "arquiteto", label: "Arquiteto de Software" },
+  { value: "uiux", label: "UI/UX Designer" },
+  { value: "analista-sistemas", label: "Analista de Sistemas" },
+  { value: "analista-programador", label: "Analista Programador" },
+  { value: "devops", label: "DevOps Engineer" },
+  { value: "dados", label: "Engenheiro de Dados" },
+  { value: "qa", label: "QA Engineer" },
+  { value: "scrum", label: "Scrum Master" },
+  { value: "product-owner", label: "Product Owner" },
+];
 
 export default function SelectField() {
   return (
-    <>
-    <article className={styles.cargoSelection}>
-      <label htmlFor="cargo" className={styles.selectTitle}>Cargo pretendido </label>
-      <select className={styles.selectField} id="cargo" name="cargo" required >
-        <option value="">Selecione um cargo</option>
-        <option value="frontend">Desenvolvedor Frontend</option>
-        <option value="backend">Desenvolvedor Backend</option>
-        <option value="fullstack">Desenvolvedor Full Stack</option>
-        <option value="mobile">Desenvolvedor Mobile</option>
-        <option value="software-dev">Desenvolvedor de Software</option>
-        <option value="software-eng">Engenheiro de Software</option>
-        <option value="arquiteto">Arquiteto de Software</option>
-        <option value="uiux">UI/UX Designer</option>
-        <option value="analista-sistemas">Analista de Sistemas</option>
-        <option value="analista-programador">Analista Programador</option>
-        <option value="devops">DevOps Engineer</option>
-        <option value="dados">Engenheiro de Dados</option>
-        <option value="qa">QA Engineer</option>
-        <option value="scrum">Scrum Master</option>
-        <option value="product-owner">Product Owner</option>
-      </select>
-
-    </article>
-    </>
+    <div className={styles.cargoSelection}>
+      <label htmlFor="cargo" className={styles.selectTitle}>Cargo pretendido</label>
+      <Select
+  inputId="cargo"
+  name="cargo"
+  options={options}
+  placeholder="Selecione um cargo"
+  className={styles.selectField}  // aplica ao wrapper externo
+  styles={{
+    menu: (base) => ({
+      ...base,
+      maxHeight: '10rem',     // altura máxima do dropdown
+      overflowY: 'auto',      // adiciona scroll se passar da altura
+    }),
+    menuList: (base) => ({
+      ...base,
+      maxHeight: '10rem', // altura máxima do menu
+      padding: 0,
+    }),
+  }}
+/>
+    </div>
   );
 }
-
-
