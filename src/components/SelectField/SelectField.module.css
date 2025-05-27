@@ -29,12 +29,14 @@
 
 @media screen and (max-width: 768px) {
   .cargoSelection {
-    width: 68%;
+    width:18rem;
     padding-top: 3%;
   }
 
   .selectTitle {
     font-size: 0.9rem;
+      margin-top: 2%;
+
   }
 
   .selectField {
@@ -47,12 +49,34 @@
 
 @media screen and (max-width: 480px) {
   .cargoSelection {
-    width: 75%;
+    width: 18rem;
+    padding-top: 2%;
+  }
+
+  .selectTitle {
+    font-size: 0.8rem;
+      margin-top: 2%;
+
+  }
+
+  .selectField {
+    width: 100%;
+    font-size: 0.8rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+  
+}
+
+@media screen and (max-width: 390px) {
+  .cargoSelection {
+    width: 18rem;
     padding-top: 3%;
   }
 
   .selectTitle {
     font-size: 0.8rem;
+      margin-top: 2%;
+
   }
 
   .selectField {

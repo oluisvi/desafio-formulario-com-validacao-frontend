@@ -60,17 +60,31 @@
     padding-top: 3%;
   }
 
-
+  
   .inputField, .error {
     font-size: 0.9rem;
+    
     height: auto; /* altura automática para melhor responsividade */
   }
   
 }
 
+@media screen and (max-width: 600px) {
+  .formBox {
+    width: 70%;
+    padding-top: 3%;
+  }
+
+  .inputField, .error {
+    font-size: 0.85rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+    
+}
+
 @media screen and (max-width: 480px) {
   .formBox {
-    width: 90%;
+    width: 80%;
     padding-top: 3%;
   }
 
@@ -81,3 +95,15 @@
     
 }
 
+@media screen and (max-width: 390px) {
+  .formBox {
+    width: 90%;
+    padding-top: 3%;
+  }
+
+  .inputField, .error {
+    font-size: 0.75rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+    
+}
