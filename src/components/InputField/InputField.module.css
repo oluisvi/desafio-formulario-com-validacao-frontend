@@ -54,9 +54,30 @@
   background-color: #2e5c94;
 }
 
-@media screen and (max-width: 1230px) {
-.formBox{
-    font-size: 80%
+@media screen and (max-width: 768px) {
+  .formBox {
+    width: 55%;
+    padding-top: 3%;
+  }
+
+
+  .inputField, .error {
+    font-size: 0.9rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+  
 }
 
+@media screen and (max-width: 480px) {
+  .formBox {
+    width: 90%;
+    padding-top: 3%;
+  }
+
+  .inputField, .error {
+    font-size: 0.8rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+    
 }
+

@@ -19,16 +19,47 @@
 
 .selectField {
   width: 18rem;
-  height: 25%; /* altura relativa ao .cargoSelection */
-  padding: 2%;    
+  height: 5%; /* altura relativa ao .cargoSelection */
   margin-top: 3%;
   font-size: 1rem;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
   appearance: none;
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .cargoSelection {
+    width: 68%;
+    padding-top: 3%;
+  }
+
+  .selectTitle {
+    font-size: 0.9rem;
+  }
+
+  .selectField {
+    width: 100%;
+    font-size: 0.9rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .cargoSelection {
+    width: 75%;
+    padding-top: 3%;
+  }
+
+  .selectTitle {
+    font-size: 0.8rem;
+  }
+
+  .selectField {
+    width: 100%;
+    font-size: 0.8rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+  
+}
 
