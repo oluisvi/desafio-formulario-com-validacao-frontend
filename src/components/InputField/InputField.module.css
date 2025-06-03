@@ -79,6 +79,23 @@
   to { opacity: 1; transform: scale(1); }
 }
 
+@media screen and (max-width: 1024px) {
+  .formBox {
+    width: 60%;
+    padding-top: 3%;
+  }
+
+  .inputField, .error {
+    font-size: 0.95rem;
+    height: auto; /* altura automática para melhor responsividade */
+  }
+  
+  .successContainer {
+  height: 60vh;
+    padding: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .formBox {
     width: 55%;
